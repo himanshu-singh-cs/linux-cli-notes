@@ -199,3 +199,100 @@ Shows the last 10 lines of a file.
 ```bash
 tail filename
 ```
+---
+
+## 12. rmdir (Remove Empty Directory)
+
+### Purpose
+Removes an empty directory.
+
+### Syntax
+
+```bash
+rmdir directory_name
+```
+
+### Example
+
+```bash
+rmdir TestFolder
+```
+
+### Note
+
+- Removes only **empty directories**.
+- If the directory contains files or subdirectories, `rmdir` will fail.
+- To remove a non-empty directory, use `rm -r`.
+
+---
+
+## 13. less
+
+### Purpose
+
+Displays the contents of a file one screen at a time. It allows both forward and backward navigation.
+
+### Syntax
+
+```bash
+less filename
+```
+
+### Example
+
+```bash
+less notes.txt
+```
+
+### Useful Keys
+
+| Key | Action |
+|------|--------|
+| ↑ / ↓ | Scroll line by line |
+| Space | Next page |
+| b | Previous page |
+| /word | Search for a word |
+| q | Quit |
+
+### Why use `less`?
+
+- Best for reading large files.
+- Does not load the entire file into memory.
+- Allows searching and scrolling in both directions.
+
+---
+
+## 14. more
+
+### Purpose
+
+Displays file contents one page at a time.
+
+### Syntax
+
+```bash
+more filename
+```
+
+### Example
+
+```bash
+more notes.txt
+```
+
+### Useful Keys
+
+| Key | Action |
+|------|--------|
+| Space | Next page |
+| Enter | Next line |
+| q | Quit |
+
+### Difference between `less` and `more`
+
+| less | more |
+|------|------|
+| Forward and backward navigation | Mostly forward navigation |
+| Search supported | Limited search |
+| More powerful | Simpler command |
+| Preferred for large files | Suitable for basic viewing |
