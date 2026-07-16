@@ -292,6 +292,8 @@ pstree
 | renice | Change running process priority |
 | uptime | Show system uptime |
 
+---
+
 # Interview Tips
 
 ## Difference between kill and killall

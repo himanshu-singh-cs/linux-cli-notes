@@ -230,6 +230,8 @@ Example Output
 | umask | Set default permissions for new files and directories |
 | ls -l | Display file permissions |
 
+---
+
 # Interview Tips
 
 ### Difference between chmod, chown and chgrp
