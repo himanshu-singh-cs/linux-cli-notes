@@ -609,3 +609,437 @@ UDP
 ## Q9. How many layers are there in the TCP/IP Model?
 
 4
+
+---
+
+---
+
+# 15. HTTP vs HTTPS
+
+## HTTP (HyperText Transfer Protocol)
+
+HTTP is used to transfer web pages between a client and a web server.
+
+Port:
+
+```
+80
+```
+
+Example:
+
+```
+http://example.com
+```
+
+HTTP is **not encrypted**, so data can be intercepted.
+
+---
+
+## HTTPS (HyperText Transfer Protocol Secure)
+
+HTTPS is the secure version of HTTP.
+
+It uses SSL/TLS encryption to protect data.
+
+Port:
+
+```
+443
+```
+
+Example:
+
+```
+https://google.com
+```
+
+### Difference
+
+| HTTP | HTTPS |
+|------|-------|
+| Port 80 | Port 443 |
+| Not Secure | Secure |
+| No Encryption | SSL/TLS Encryption |
+
+---
+
+# 16. SSH (Secure Shell)
+
+SSH is used to securely connect to a remote Linux server.
+
+### Syntax
+
+```bash
+ssh username@server_ip
+```
+
+Example
+
+```bash
+ssh ubuntu@192.168.1.100
+```
+
+Default Port
+
+```
+22
+```
+
+---
+
+# 17. FTP vs SFTP
+
+## FTP (File Transfer Protocol)
+
+Used for transferring files over a network.
+
+Ports
+
+```
+20
+21
+```
+
+Not encrypted.
+
+---
+
+## SFTP (SSH File Transfer Protocol)
+
+Transfers files securely using SSH.
+
+Port
+
+```
+22
+```
+
+Encrypted and secure.
+
+---
+
+# Difference
+
+| FTP | SFTP |
+|------|------|
+| Not Secure | Secure |
+| Ports 20/21 | Port 22 |
+| No Encryption | Uses SSH Encryption |
+
+---
+
+# 18. Telnet
+
+Telnet is used to remotely access another computer.
+
+Port
+
+```
+23
+```
+
+It is not secure because it sends data in plain text.
+
+SSH has replaced Telnet in most environments.
+
+---
+
+# 19. Ping
+
+Ping checks whether a device is reachable on a network.
+
+### Command
+
+```bash
+ping google.com
+```
+
+Ping uses the ICMP protocol.
+
+---
+
+# 20. Traceroute
+
+Traceroute shows the path packets take to reach a destination.
+
+Linux
+
+```bash
+traceroute google.com
+```
+
+Windows
+
+```cmd
+tracert google.com
+```
+
+---
+
+# 21. netstat
+
+Displays active network connections and listening ports.
+
+```bash
+netstat -tuln
+```
+
+---
+
+# 22. ss
+
+Modern replacement for netstat.
+
+```bash
+ss -tuln
+```
+
+Faster and more efficient.
+
+---
+
+# 23. curl vs wget
+
+## curl
+
+Used to transfer data and test APIs.
+
+```bash
+curl https://example.com
+```
+
+---
+
+## wget
+
+Used to download files.
+
+```bash
+wget https://example.com/file.zip
+```
+
+---
+
+# Difference
+
+| curl | wget |
+|------|------|
+| Transfers data | Downloads files |
+| API Testing | File Download |
+| Prints output | Saves files |
+
+---
+
+# 24. NAT (Network Address Translation)
+
+NAT allows multiple private IP addresses to share one public IP address.
+
+Example
+
+```
+Laptop (192.168.1.10)
+Phone  (192.168.1.20)
+Tablet (192.168.1.30)
+        │
+      Router (NAT)
+        │
+Public IP → Internet
+```
+
+---
+
+# 25. Firewall
+
+A firewall controls incoming and outgoing network traffic.
+
+It blocks unauthorized access while allowing legitimate communication.
+
+Linux Example
+
+```bash
+sudo ufw status
+```
+
+---
+
+# 26. Proxy
+
+A proxy server acts on behalf of the client.
+
+Example
+
+```
+Client
+   ↓
+Proxy Server
+   ↓
+Internet
+```
+
+Used for:
+
+- Privacy
+- Content Filtering
+- Caching
+
+---
+
+# 27. Reverse Proxy
+
+A reverse proxy sits in front of servers.
+
+Example
+
+```
+Users
+   ↓
+Nginx
+   ↓
+Application Server
+```
+
+Used for:
+
+- Security
+- Load Balancing
+- SSL Termination
+
+---
+
+# 28. Load Balancer
+
+A load balancer distributes incoming traffic across multiple servers.
+
+Example
+
+```
+Users
+   ↓
+Load Balancer
+   ↓
+Server 1
+Server 2
+Server 3
+```
+
+Benefits
+
+- High Availability
+- Better Performance
+- Fault Tolerance
+
+---
+
+# 29. Nginx
+
+Nginx is a high-performance web server.
+
+It can also work as:
+
+- Reverse Proxy
+- Load Balancer
+- Static File Server
+
+### Check Status
+
+```bash
+systemctl status nginx
+```
+
+### Start Service
+
+```bash
+sudo systemctl start nginx
+```
+
+---
+
+# Summary
+
+| Concept | Purpose |
+|----------|----------|
+| HTTP | Web communication |
+| HTTPS | Secure web communication |
+| SSH | Secure remote login |
+| FTP | File transfer |
+| SFTP | Secure file transfer |
+| Ping | Check connectivity |
+| Traceroute | Show packet path |
+| netstat | Network statistics |
+| ss | Modern network monitoring |
+| curl | Transfer data |
+| wget | Download files |
+| NAT | Private to Public IP translation |
+| Firewall | Network security |
+| Proxy | Client-side intermediary |
+| Reverse Proxy | Server-side intermediary |
+| Load Balancer | Distributes traffic |
+| Nginx | Web Server & Reverse Proxy |
+
+---
+
+# Interview Questions
+
+### Which port does SSH use?
+
+22
+
+---
+
+### Which port does HTTPS use?
+
+443
+
+---
+
+### Which command checks network connectivity?
+
+```bash
+ping google.com
+```
+
+---
+
+### Which command downloads files?
+
+```bash
+wget URL
+```
+
+---
+
+### Which command is used for API testing?
+
+```bash
+curl URL
+```
+
+---
+
+### Which command shows listening ports?
+
+```bash
+ss -tuln
+```
+
+---
+
+### What is the purpose of a firewall?
+
+To allow or block network traffic based on security rules.
+
+---
+
+### What is NAT?
+
+Network Address Translation converts private IP addresses into public IP addresses.
+
+---
+
+### What is the role of Nginx?
+
+- Web Server
+- Reverse Proxy
+- Load Balancer
+- Static File Server
