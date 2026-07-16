@@ -313,3 +313,299 @@ Display MAC Address
 ```bash
 ip link
 ```
+
+---
+
+---
+
+# 9. DNS (Domain Name System)
+
+## Purpose
+
+DNS converts a domain name into an IP address.
+
+## Example
+
+Instead of remembering
+
+```
+142.250.183.78
+```
+
+you simply type
+
+```
+google.com
+```
+
+DNS finds the corresponding IP address.
+
+## Real Life Example
+
+A phone contact saves a person's name instead of remembering their phone number.
+
+## Command
+
+```bash
+nslookup google.com
+```
+
+or
+
+```bash
+dig google.com
+```
+
+---
+
+# 10. DHCP (Dynamic Host Configuration Protocol)
+
+## Purpose
+
+DHCP automatically assigns network configuration to devices.
+
+It provides
+
+- IP Address
+- Subnet Mask
+- Gateway
+- DNS Server
+
+## Example
+
+When you connect your laptop to Wi-Fi, you do not manually enter an IP address.
+
+The router automatically assigns one.
+
+---
+
+# 11. Ports
+
+## Purpose
+
+A port identifies a specific service running on a device.
+
+One IP address can have many services.
+
+Ports help distinguish them.
+
+## Common Ports
+
+| Port | Service |
+|------|----------|
+| 20/21 | FTP |
+| 22 | SSH |
+| 23 | Telnet |
+| 25 | SMTP |
+| 53 | DNS |
+| 80 | HTTP |
+| 110 | POP3 |
+| 143 | IMAP |
+| 443 | HTTPS |
+| 3306 | MySQL |
+| 5432 | PostgreSQL |
+| 6379 | Redis |
+| 8080 | Tomcat |
+
+## Commands
+
+```bash
+ss -tuln
+```
+
+```bash
+netstat -tuln
+```
+
+---
+
+# 12. TCP vs UDP
+
+## TCP
+
+Reliable protocol.
+
+Guarantees data delivery.
+
+Examples
+
+- HTTP
+- HTTPS
+- SSH
+- FTP
+
+---
+
+## UDP
+
+Fast protocol.
+
+Does not guarantee delivery.
+
+Examples
+
+- Video Streaming
+- Gaming
+- DNS
+- VoIP
+
+---
+
+## Difference
+
+| TCP | UDP |
+|------|------|
+| Reliable | Faster |
+| Connection-Oriented | Connectionless |
+| Error Checking | Minimal Error Checking |
+| Slower | Faster |
+
+---
+
+# 13. OSI Model
+
+OSI has seven layers.
+
+| Layer | Name |
+|--------|------|
+| 7 | Application |
+| 6 | Presentation |
+| 5 | Session |
+| 4 | Transport |
+| 3 | Network |
+| 2 | Data Link |
+| 1 | Physical |
+
+## Mnemonic
+
+All People Seem To Need Data Processing
+
+---
+
+# 14. TCP/IP Model
+
+TCP/IP consists of four layers.
+
+| Layer |
+|--------|
+| Application |
+| Transport |
+| Internet |
+| Network Access |
+
+---
+
+# Difference between OSI and TCP/IP
+
+| OSI | TCP/IP |
+|------|---------|
+| 7 Layers | 4 Layers |
+| Reference Model | Practical Model |
+| Mainly Educational | Used on the Internet |
+
+---
+
+# Useful Commands
+
+Check IP Address
+
+```bash
+ip addr
+```
+
+Check Routing Table
+
+```bash
+ip route
+```
+
+Check Listening Ports
+
+```bash
+ss -tuln
+```
+
+DNS Lookup
+
+```bash
+nslookup google.com
+```
+
+Show Network Interfaces
+
+```bash
+ip link
+```
+
+---
+
+# Summary
+
+| Concept | Purpose |
+|----------|----------|
+| DNS | Converts domain names into IP addresses |
+| DHCP | Automatically assigns IP addresses |
+| Port | Identifies network services |
+| TCP | Reliable communication |
+| UDP | Fast communication |
+| OSI | 7-layer networking model |
+| TCP/IP | Practical networking model |
+
+---
+
+# Interview Questions
+
+## Q1. What is DNS?
+
+DNS converts a domain name into an IP address.
+
+---
+
+## Q2. What does DHCP provide?
+
+- IP Address
+- Gateway
+- DNS
+- Subnet Mask
+
+---
+
+## Q3. Which protocol is reliable?
+
+TCP
+
+---
+
+## Q4. Which protocol is faster?
+
+UDP
+
+---
+
+## Q5. Which protocol is used for video streaming?
+
+UDP
+
+---
+
+## Q6. Which port is used by SSH?
+
+22
+
+---
+
+## Q7. Which port is used by HTTPS?
+
+443
+
+---
+
+## Q8. How many layers are there in the OSI Model?
+
+7
+
+---
+
+## Q9. How many layers are there in the TCP/IP Model?
+
+4
